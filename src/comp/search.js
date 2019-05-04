@@ -23,7 +23,6 @@ export default class search extends Component {
     const q = this.state.search;
     const key = process.env.REACT_APP_APIKEY;
     const url = "https://newsapi.org/v2/everything?q=" + q + "&apiKey=" + key;
-    console.log("url:-", url);
     const ss = await req(url);
     this.setState({
       highlights: ss
@@ -33,7 +32,6 @@ export default class search extends Component {
   async componentDidMount() {
     const key = process.env.REACT_APP_APIKEY;
     const url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=" + key;
-    console.log("url:-", url);
     const ss = await req(url);
     this.setState({
       highlights: ss
