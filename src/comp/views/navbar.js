@@ -21,7 +21,6 @@ class navbar extends Component {
       search: true,
       data: value
     });
-    console.log("search", this.state.search);
     this.props.add(this.state.data);
   };
 

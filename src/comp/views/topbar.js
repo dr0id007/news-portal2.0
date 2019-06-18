@@ -22,9 +22,7 @@ class topbar extends Component {
     await this.setState({
       click: e.target.name
     });
-    console.log("click:-", this.state.click);
     const value = await Fetch(this.state.click);
-    console.log("value:-", value);
     this.setState({
       data: value
     });
