@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import Footer from "./footer";
 
 export default class about extends Component {
   state = {
@@ -8,7 +9,6 @@ export default class about extends Component {
   };
 
   componentDidMount() {
-    console.log(this.state.data);
     window.addEventListener("resize", this.onResize);
   }
 
@@ -24,29 +24,34 @@ export default class about extends Component {
     }
 
     return (
-      <div className="container mt-5">
-        <div className="row d-block">
-          <div className="col-12 text-center mb-5">
-            <h1 className="font-weight-light">{this.state.data.title}</h1>
+      <div>
+        <div className="container mt-5 mb-5 pb-5">
+          <div className="row d-block">
+            <div className="col-12 text-center mb-5">
+              <h1 className="font-weight-light">{this.state.data.title}</h1>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-10-md col">
+              <img
+                width={this.state.width}
+                src={this.state.data.urlToImage}
+                alt="some random"
+                className="header-image"
+              />
+            </div>
+            <div className="col-10-md col mt-2">
+              <p>
+                {this.state.data.description}
+                {this.state.data.content}
+              </p>
+              <a href={this.state.data.url} className="btn btn-outline-primary">
+                Full Article
+              </a>
+            </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-10-md col">
-            <img
-              width={this.state.width}
-              src={this.state.data.urlToImage}
-              alt="some random"
-              className="header-image"
-            />
-          </div>
-          <div className="col-10-md col mt-2">
-            <p>
-              {this.state.data.description}
-              {this.state.data.content}
-            </p>
-            <button className="btn btn-outline-primary">Full Article</button>
-          </div>
-        </div>
+        <Footer className="mt-5 pt-5" />
       </div>
     );
   }
