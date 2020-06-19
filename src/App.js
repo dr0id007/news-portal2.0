@@ -12,16 +12,18 @@ export default class App extends Component {
     return (
       <div>
         <Router>
-          <Navbar />
-          <div className="main-component">
-            <Switch>
-              <Route path={"/subscribe"} component={Subscribe} />
-              <Route path={"/about"} component={About} />
-              <Route path={"/view"} component={View} />
-              <Route path={"/"} component={Home} />
-            </Switch>
-          </div>
-          <Footer className="footer" />
+          <>
+            <Navbar />
+            <div className="main-component">
+              <Switch>
+                <Route path={"/subscribe"} component={Subscribe} />
+                <Route path={"/about"} component={About} />
+                <Route path={"/view"} component={View} />
+                <Route path={"/"} component={Home} />
+              </Switch>
+            </div>
+            <Footer className="footer" />
+          </>
         </Router>
       </div>
     );
