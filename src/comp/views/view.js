@@ -5,7 +5,7 @@ import Footer from "./footer";
 export default class about extends Component {
   state = {
     data: this.props.location.data,
-    width: (50 * window.innerWidth) / 100
+    width: (50 * window.innerWidth) / 100,
   };
 
   componentDidMount() {
@@ -14,7 +14,7 @@ export default class about extends Component {
 
   onResize = () => {
     this.setState({
-      width: (50 * window.innerWidth) / 100
+      width: (50 * window.innerWidth) / 100,
     });
   };
 
@@ -32,7 +32,7 @@ export default class about extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-10-md col">
+            <div className="col-12-md col">
               <img
                 width={this.state.width}
                 src={this.state.data.urlToImage}
@@ -40,18 +40,20 @@ export default class about extends Component {
                 className="header-image"
               />
             </div>
-            <div className="col-10-md col mt-2">
-              <p>
+            <div className="col-12-md col mt-2">
+              <p style={{ color: "#7c7c7c" }}>
                 {this.state.data.description}
                 {this.state.data.content}
               </p>
-              <a href={this.state.data.url} className="btn btn-outline-primary">
-                Full Article
-              </a>
             </div>
           </div>
+          <div className="mt-4">
+            <a href={this.state.data.url} className="btn btn-outline-primary">
+              Full Article
+            </a>
+          </div>
         </div>
-        <Footer className="mt-5 pt-5" />
+        {/* <Footer className="mt-5 pt-5" /> */}
       </div>
     );
   }

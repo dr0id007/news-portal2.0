@@ -1,13 +1,13 @@
 import React from "react";
-import Footer from "./footer";
+// import Footer from "./footer";
 
 const about = () => {
   return (
     <div>
-      <header className="text-center py-5 mb-4 bg-b">
-        <div className="container">
-          <h1 className="font-weight-light text-white ">About Page</h1>
-          <h5 className="text-white font-weight-light p-5 mb-5">
+      <header className="text-center py-5 mb-4 bg-gray">
+        <div className="container about">
+          <h1 className="font-weight-light ">About Page</h1>
+          <h5 className="font-weight-light p-5 mb-5">
             This is the about section of the news portal which contains same old
             boring section that no one wants to read and if you are reading this
             that means you are interested in this project or just click by
@@ -24,7 +24,7 @@ const about = () => {
           </h5>
         </div>
       </header>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

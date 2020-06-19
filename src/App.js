@@ -5,6 +5,7 @@ import Navbar from "./comp/views/navbar";
 import View from "./comp/views/view";
 import About from "./comp/views/about";
 import Subscribe from "./comp/views/subscribe";
+import Footer from "./comp/views/footer";
 
 export default class App extends Component {
   render() {
@@ -12,12 +13,15 @@ export default class App extends Component {
       <div>
         <Router>
           <Navbar />
-          <Switch>
-            <Route path={"/subscribe"} component={Subscribe} />
-            <Route path={"/about"} component={About} />
-            <Route path={"/view"} component={View} />
-            <Route path={"/"} component={Home} />
-          </Switch>
+          <div className="main-component">
+            <Switch>
+              <Route path={"/subscribe"} component={Subscribe} />
+              <Route path={"/about"} component={About} />
+              <Route path={"/view"} component={View} />
+              <Route path={"/"} component={Home} />
+            </Switch>
+          </div>
+          <Footer className="footer" />
         </Router>
       </div>
     );

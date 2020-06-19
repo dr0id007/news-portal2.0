@@ -25,6 +25,7 @@ $topColor: #7c7f84;
 .topbar {
   width: 100%;
 }
+
 .topbar .navbar-nav {
   display: flex;
   flex-direction: row;
@@ -80,4 +81,8 @@ $topColor: #7c7f84;
 
 .bg-b {
   background-color: #007bff;
+}
+
+.bg-gray {
+  background-color: #e7e7e7;
 }

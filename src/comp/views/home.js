@@ -8,13 +8,13 @@ class home extends Component {
   state = {
     data: "",
     card: "",
-    redux_data: ""
+    redux_data: "",
   };
 
   async componentDidMount() {
     const data = await Fetch(null);
     await this.setState({
-      data: data
+      data: data,
     });
   }
 
@@ -30,13 +30,12 @@ class home extends Component {
             {this.props.state === "" ? this.state.data : this.props.state}
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return { state: state.data };
 };
 
