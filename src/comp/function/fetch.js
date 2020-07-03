@@ -3,6 +3,7 @@ import Card from "../views/card-boot";
 
 const fetch = async (data) => {
   const key = process.env.REACT_APP_APIKEY;
+  console.log("key", key);
   let url = "";
   if (data === null) {
     url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=" + key;
