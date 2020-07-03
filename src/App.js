@@ -6,6 +6,7 @@ import View from "./comp/views/view";
 import About from "./comp/views/about";
 import Subscribe from "./comp/views/subscribe";
 import Footer from "./comp/views/footer";
+require("dotenv").config();
 
 export default class App extends Component {
   render() {
