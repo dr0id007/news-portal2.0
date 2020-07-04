@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const card_boot = data => {
+const card_boot = (data) => {
   let value = data.urlToImage;
   if (value === null) {
     value =
@@ -9,7 +9,7 @@ const card_boot = data => {
   }
 
   return (
-    <div key={data.title} className="card">
+    <div key={data.title + data.description + data.urlToImage} className="card">
       <div className="view">
         <img src={value} className="card-img-top" alt="preview" />
         <a href="some">
@@ -22,7 +22,7 @@ const card_boot = data => {
         <NavLink
           to={{
             pathname: "/view",
-            data: data
+            data: data,
           }}
           className="btn btn-outline-white btn-md waves-effect"
         >
